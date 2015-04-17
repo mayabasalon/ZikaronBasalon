@@ -1,6 +1,7 @@
 class HostsController < ApplicationController
   before_filter :basic_auth, only: [:index,:edit]
   before_filter :signed_in_user, only: [:show]
+  before_filter :root_redirect, only: [:new]
 
   def index
     @hosts = Host.order('created_at DESC').all

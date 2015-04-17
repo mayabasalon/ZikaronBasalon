@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
    end
   end
 
+  def root_redirect
+  	redirect_to root_path
+  end
+
 	private
 
 	def set_locale
