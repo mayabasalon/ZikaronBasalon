@@ -1,18 +1,20 @@
 <div id="header">
 	<div id="logo"><%= link_to image_tag("logo.png"),"http://www.zikaronbasalon.com" %></div>
-	<div class="header_links">
-		<div class="header_link"><%= link_to t('.want_to_host'), new_host_path %></div>
-		<div class="header_link"><%= link_to t('.want_to_guest'), root_path %></div>
-	</div>
-	<%= link_to hosts_path do %>
-		<div class="header_box" id="staff"><%= t '.staff' %></div>
+	<% if false %>
+		<div class="header_links">
+			<div class="header_link"><%= link_to t('.want_to_host'), new_host_path %></div>
+			<div class="header_link"><%= link_to t('.want_to_guest'), root_path %></div>
+		</div>
+		<%= link_to hosts_path do %>
+			<div class="header_box" id="staff"><%= t '.staff' %></div>
+		<% end %>
 	<% end %>
 
-	<% if signed_in? %>
+	<% if false#signed_in? %>
 		<%= link_to host_path(current_user) do %>
 			<div class="header_box" id="host_dashboard"><%= t '.host_dashboard' %></div>
 		<% end %>
-	<% else %>
+	<% elsif false %>
 		<%= link_to signin_path do %>
 			<div class="header_box" id="host_dashboard"><%= t '.host_dashboard' %></div>
 		<% end %>

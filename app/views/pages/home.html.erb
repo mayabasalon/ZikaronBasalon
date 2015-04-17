@@ -1,21 +1,23 @@
 <div id="mask" class="hidden"></div>
 
 <div class="container_inner" id="host_list">
+	<%= image_tag "you.jpeg" %>
+<% if false %>
 	 <div class="title"><%= t '.title' %></div>
 	 <br>
 	 <div class="explenation">
-	 	<p>
-	 		<%= t '.explenation1' %>
-	 	</p>
-	 	<br>			
-	 	<p>
-	 		 <%= t '.explenation21' %><%= link_to t('.explenation_link'), new_host_path %>. <%= t '.explenation22' %>
-	 	</p>
-	 	<br>
-	 	<p>
-	 		<%= t '.explenation3' %>	 
-		</p>
-</div>
+		 	<p>
+		 		<%= t '.explenation1' %>
+		 	</p>
+		 	<br>			
+		 	<p>
+		 		 <%= t '.explenation21' %><%= link_to t('.explenation_link'), new_host_path %>. <%= t '.explenation22' %>
+		 	</p>
+		 	<br>
+		 	<p>
+		 		<%= t '.explenation3' %>	 
+			</p>
+	</div>
 
 	 <%= select_tag :city_select, options_from_collection_for_select(City.order(:name).all, :id, :name), prompt: t('.select_city') %>
 
@@ -61,6 +63,7 @@
 	<div id="register" class="hidden">
 		<%= render 'guests/register' %>
 	</div>
+<% end %>
 </div>
 
 
