@@ -34,6 +34,6 @@ class HostMailer < ActionMailer::Base
     # attachments['שאלות_מנחות_לעדות.pdf'] = File.read("#{Rails.root}/public/kit/questions_for_witness.pdf")
     #attachments['עדויות_וסרטי_עדות.pdf'] = File.read("#{Rails.root}/public/kit/testimonials.pdf") 
     #attachments['מצגת_מפגש_הכנה_מארחים.pdf'] = File.read("#{Rails.root}/public/kit/preperation.pdf")   
-    mail :to => @host.email, :subject => "זיכרון בסלון- משוב"
+    mail :to => @host.email, :subject => "זיכרון בסלון - תמונות מהערב"
   end
 end
